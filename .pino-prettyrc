@@ -1,0 +1,4 @@
+{
+    "ignore": "hostname,pid",
+    "translateTime": true
+}

@@ -1,0 +1,29 @@
+{
+    "name": "advent-of-code-2020",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "day": "npm run -s build && node ./src/days/${DAY}/run.js | npx pino-pretty -c -l",
+        "day:watch": "nodemon -e ts --exec \"npm run -s day\"",
+        "days": "npm run -s build && node ./src/days/index.js | npx pino-pretty -c -l",
+        "build": "npm run -s format && npm run -s transpile",
+        "format": "npx prettier --list-different --write \"**/*\"",
+        "transpile": "npx tsc -p ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^14.14.16",
+        "@types/pino": "^6.3.4",
+        "prettier": "^2.2.1",
+        "typescript": "^4.1.3"
+    },
+    "dependencies": {
+        "nodemon": "^2.0.6",
+        "pino": "^6.8.0",
+        "pino-pretty": "^4.3.0",
+        "zod": "^1.11.11"
+    }
+}
