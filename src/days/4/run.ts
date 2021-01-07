@@ -6,7 +6,7 @@ const input = getInput(4)
     .split('\n\n')
     .map((line) => line.replace(/\n/g, ' ').split(' '));
 
-const hasValidFields = (lineItems: string[], recquierFields: string[]): boolean => {
+const hasValidFields = (lineItems: string[], requiredFields: string[]): boolean => {
     let result = true;
     lineItems = lineItems.map((item) => item.split(':')[0]);
     requiredFields.forEach((field) => {
