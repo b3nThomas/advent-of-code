@@ -19,6 +19,9 @@ input.forEach((rule) => {
         .replace('.', '')
         .split(', ')
         .forEach((bagRule) => {
+            if (bagRule === 'no other bags') {
+                return;
+            }
             const bagSplit = bagRule.split(' ');
             const count = Number(bagSplit.shift());
             innerBagRules[bagSplit.join(' ').replace(/ bag(s)?/, '')] = count;
@@ -26,19 +29,32 @@ input.forEach((rule) => {
     outerBagRules[outerBagColour] = innerBagRules;
 });
 
-const colourBagsThatCanDirectlyContainAtLeastOneGoldBag = [];
+const bagsThatCanEventuallyStoreAtLeastOneGoldBag = new Set();
 
-for (let outerBagColour in outerBagRules) {
-    if (outerBagRules[outerBagColour]['shiny gold']) {
-        colourBagsThatCanDirectlyContainAtLeastOneGoldBag.push(outerBagColour);
+const getOuterBagsThatContainAtLeastOneInnerBag = (innerBagColour: string): void => {
+    for (let outerBagColour in outerBagRules) {
+        if (outerBagRules[outerBagColour][innerBagColour]) {
+            bagsThatCanEventuallyStoreAtLeastOneGoldBag.add(outerBagColour);
+            getOuterBagsThatContainAtLeastOneInnerBag(outerBagColour);
+        }
     }
-}
+};
 
-log.info({ colourBagsThatCanDirectlyContainAtLeastOneGoldBag });
+getOuterBagsThatContainAtLeastOneInnerBag('shiny gold');
 
-// Need to potentially use recursion here...
-// Walk through each parent, get and store the colour etc etc.
+log.info('7-1: %s', bagsThatCanEventuallyStoreAtLeastOneGoldBag.size);
 
+let totalBagsInsideMyOneShinyGoldBag = 0;
 
-// log.info('7-1: %s', <answer>);
-// log.info('7-2: %s', <answer>);
+const getTotalInnerBagsForTheGivenBag = (bagColour: string) => {
+    for (let innerBag in outerBagRules[bagColour]) {
+        totalBagsInsideMyOneShinyGoldBag += outerBagRules[bagColour][innerBag];
+        for (let i = 0; i < outerBagRules[bagColour][innerBag]; i++) {
+            getTotalInnerBagsForTheGivenBag(innerBag);
+        }
+    }
+};
+
+getTotalInnerBagsForTheGivenBag('shiny gold');
+
+log.info('7-2: %s', totalBagsInsideMyOneShinyGoldBag);
