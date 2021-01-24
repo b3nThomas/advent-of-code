@@ -4,7 +4,7 @@ import { log } from '../../utils/log';
 const input = getInput(9)
     .split('\n')
     .filter((row) => row)
-    .map((n) => Number(n));
+    .map((n) => parseInt(n, 10));
 
 let answer1;
 
