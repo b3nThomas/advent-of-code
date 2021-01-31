@@ -1,7 +1,10 @@
-// import { getInput } from '../../utils/getInput';
-// import { log } from '../../utils/log';
+import { getInput } from '../../utils/getInput';
+import { log } from '../../utils/log';
 
-// const input = getInput(<x>).split('\n').filter((row) => row);
+const input = getInput(11)
+    .split('\n')
+    .filter((row) => row);
 
-// log.info('<x>-1: %s', <answer>);
-// log.info('<x>-2: %s', <answer>);
+log.info('11-1: %s', input);
+
+// log.info('11-2: %s', <answer>);
