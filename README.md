@@ -10,7 +10,4 @@ $ DAY=<day> npm run day
 
 # Watch a specific day
 $ DAY=<day> npm run day:watch
-
-# Run all days
-$ npm run days
 ```

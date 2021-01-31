@@ -4,10 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "build": "npm run -s format && npm run -s transpile",
         "day": "npm run -s build && node ./src/days/${DAY}/run.js | npx pino-pretty -c -l",
         "day:watch": "nodemon -e ts --exec \"npm run -s day\"",
-        "days": "npm run -s build && node ./src/days/index.js | npx pino-pretty -c -l",
-        "build": "npm run -s format && npm run -s transpile",
         "format": "npx prettier --list-different --write \"**/*\"",
         "transpile": "npx tsc -p ."
     },
