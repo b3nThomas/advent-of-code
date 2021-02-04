@@ -1,5 +1,6 @@
 .*
 *.js
+!*.config.js
 *.sh
 *.txt
 node_modules
