@@ -2,7 +2,7 @@ import * as z from 'zod';
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(4)
+const input = getInput(2021, 4)
     .split('\n\n')
     .map((line) => line.replace(/\n/g, ' ').split(' '));
 
@@ -18,8 +18,9 @@ const hasValidFields = (lineItems: string[], requiredFields: string[]): boolean 
 };
 
 const requiredFields = ['ecl', 'pid', 'eyr', 'hcl', 'byr', 'iyr', 'hgt'];
-let validPassportCount = input.filter((passport) => hasValidFields(passport, requiredFields))
-    .length;
+let validPassportCount = input.filter((passport) =>
+    hasValidFields(passport, requiredFields)
+).length;
 
 log.info('4-1: %s', validPassportCount);
 

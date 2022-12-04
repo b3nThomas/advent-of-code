@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(7).split('\n');
+const input = getInput(2021, 7).split('\n');
 
 type InnerBagRules = { [innerBagColour: string]: number };
 type OuterBagRules = { [outerBagColour: string]: InnerBagRules };

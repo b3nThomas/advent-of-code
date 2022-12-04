@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(3).split('\n');
+const input = getInput(2021, 3).split('\n');
 
 const repeatLength = input[0].length;
 const slopeLength = input.length;

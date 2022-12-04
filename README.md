@@ -1,13 +1,16 @@
-# [advent-of-code-2020](https://adventofcode.com/2020)
+# [Advent of Code](https://adventofcode.com)
 
-Let's see if I can actually complete a whole AoC!
+Repo to tackle the annual Advent of Code challenges.
 
 ## Usage
 
 ```bash
-# Run a specific day
-$ DAY=<day> npm run day
+# Run a specific year/day
+$ year=2022 day=1 yarn start
 
-# Watch a specific day
-$ DAY=<day> npm run day:watch
+# Watch a specific year/day
+$ year=2022 day=1 yarn start
+
+# Test current changes
+$ yarn test --watch
 ```

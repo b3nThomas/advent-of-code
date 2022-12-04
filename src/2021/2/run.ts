@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(2).split('\n');
+const input = getInput(2021, 2).split('\n');
 let validPasswords = 0;
 
 for (const x of input) {

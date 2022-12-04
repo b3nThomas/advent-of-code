@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(10)
+const input = getInput(2021, 10)
     .split('\n')
     .filter((row) => row)
     .map((n) => parseInt(n, 10))

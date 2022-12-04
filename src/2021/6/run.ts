@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(6).split('\n');
+const input = getInput(2021, 6).split('\n');
 
 let total1 = 0;
 let currentGroup1 = new Set();

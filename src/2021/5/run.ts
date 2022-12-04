@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(5).split('\n');
+const input = getInput(2021, 5).split('\n');
 
 const getRow = (rowSequence: string) => {
     const sequence = rowSequence.split('');

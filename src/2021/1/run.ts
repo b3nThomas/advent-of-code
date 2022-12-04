@@ -1,7 +1,7 @@
 import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
 
-const input = getInput(1).split('\n');
+const input = getInput(2021, 1).split('\n');
 
 let number1 = 0;
 let number2 = 0;
