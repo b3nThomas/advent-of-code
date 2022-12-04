@@ -1,4 +1,5 @@
 .*
+*.ejs.t
 *.js
 !*.config.js
 *.sh
