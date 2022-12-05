@@ -6,5 +6,8 @@ import { log } from '../../utils/log';
 
 const input = getInput(<%=year%>, <%=day%>).split('\n');
 
-log.info('<%=day%>-1: %s', '<answer>');
-log.info('<%=day%>-2: %s', '<answer>');
+const answer1 = 'TODO';
+const answer2 = 'TODO';
+
+log.info('<%=day%>-1: %s', answer1);
+log.info('<%=day%>-2: %s', answer2);
