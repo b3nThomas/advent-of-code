@@ -43,7 +43,7 @@ test.each([
     },
     {
         input: 'C Z',
-        expected: 1,
+        expected: 7,
         context: 'win is required against scissors',
     },
 ])('returns the expected score when $context', ({ input, expected }) => {

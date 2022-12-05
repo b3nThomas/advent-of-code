@@ -23,3 +23,27 @@ export const SHAPE_SCORE: Record<string, number> = {
     Y: 2, // Paper
     Z: 3, // Scissors
 };
+
+export const RESULT_SCORE: Record<string, number> = {
+    X: 0, // Loss
+    Y: 3, // Draw
+    Z: 6, // Win
+};
+
+export const ROCK_REQUIRED_MOVES = [
+    'B X', // Lose against Paper
+    'A Y', // Draw with Rock,
+    'C Z', // Win against Scissors
+];
+
+export const PAPER_REQUIRED_MOVES = [
+    'C X', // Lose against Scissors
+    'B Y', // Draw with Paper
+    'A Z', // Win against Rocks
+];
+
+export const SCISSORS_REQUIRED_MOVES = [
+    'A X', // Lose against Rock
+    'C Y', // Draw against Scissors
+    'B Z', // Win against Paper
+];
