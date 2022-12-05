@@ -1,6 +1,6 @@
 import { CaloriesTotals } from './types';
 
-export default (input: string[]): CaloriesTotals => {
+export const collectCaloriesTotals = (input: string[]): CaloriesTotals => {
     let currentElf = 0;
 
     return input.reduce((acc: CaloriesTotals, item) => {

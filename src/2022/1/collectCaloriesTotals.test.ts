@@ -1,4 +1,4 @@
-import collect from './collectCaloriesTotals';
+import { collectCaloriesTotals as collect } from './collectCaloriesTotals';
 
 test('throws if given a non-number string', () => {
     const input = ['Elf'];
