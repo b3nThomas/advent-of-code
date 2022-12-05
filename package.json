@@ -6,7 +6,7 @@
     "scripts": {
         "generate": "hygen",
         "prestart": "tsc -p .",
-        "start": "node src/${year}/${day}/run",
+        "start": "node dist/${year}/${day}/run",
         "watch": "nodemon -e ts --exec 'yarn start || exit 1'",
         "test": "jest"
     },
