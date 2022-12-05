@@ -1,4 +1,6 @@
+dist
 node_modules
 *.js
 !.*.js
 !*.config.js
+!_templates/**/prompt.js
