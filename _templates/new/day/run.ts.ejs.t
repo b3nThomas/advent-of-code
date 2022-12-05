@@ -1,8 +1,8 @@
 ---
 to: src/<%=year%>/<%=day%>/run.ts
 ---
-import { getInput } from '../../utils/getInput';
 import { log } from '../../utils/log';
+import { getInput } from '../../utils/getInput';
 
 const input = getInput(<%=year%>, <%=day%>).split('\n');
 
