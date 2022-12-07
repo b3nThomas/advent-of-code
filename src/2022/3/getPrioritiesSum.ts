@@ -10,11 +10,12 @@ export const getPrioritiesSumOfRucksacks = (rucksacks: string[]) =>
     );
 
 export const getPrioritiesSumOfGroups = (rucksacks: string[]) => {
+    const GROUP_SIZE = 3;
     const commonItems = [];
 
-    for (let i = 0; i < rucksacks.length; i += 3) {
+    for (let i = 0; i < rucksacks.length; i += GROUP_SIZE) {
         commonItems.push(
-            findCommonItemFromGroup(rucksacks.slice(i, i + 3) as [string, string, string])
+            findCommonItemFromGroup(rucksacks.slice(i, i + GROUP_SIZE) as [string, string, string])
         );
     }
 
