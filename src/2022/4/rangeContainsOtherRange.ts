@@ -1,8 +1,8 @@
 import { SectionRange } from './types';
 
 export const rangeContainsOtherRange = (ranges: [SectionRange, SectionRange]) => {
-    const rangeA = ranges[0].split('-');
-    const rangeB = ranges[1].split('-');
+    const rangeA = ranges[0].split('-').map(Number);
+    const rangeB = ranges[1].split('-').map(Number);
 
     return [
         [0, 1],
