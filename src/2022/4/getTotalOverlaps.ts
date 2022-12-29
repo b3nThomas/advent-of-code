@@ -1,4 +1,4 @@
-import { isTruthy } from '../../utils/isTruthy';
+import { isTruthy } from '../../lib/isTruthy';
 import { extractRanges } from './extractRanges';
 import type { ContainsOverlaps } from './types';
 

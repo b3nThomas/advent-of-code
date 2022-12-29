@@ -1,6 +1,5 @@
-import { getInput } from '../../utils/getInput';
+import { getInput, log } from '../../lib';
 import { isEqual } from 'lodash';
-import { log } from '../../utils/log';
 
 type SeatEmpty = 'L';
 type SeatOccupied = '#';
