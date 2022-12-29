@@ -1,13 +1,11 @@
+import { createRange } from './createRange';
 import type { SectionRange } from './types';
 
 export const rangeContainsOtherRange = (ranges: [SectionRange, SectionRange]): boolean => {
-    const rangeA = ranges[0].split('-').map(Number);
-    const rangeB = ranges[1].split('-').map(Number);
+    const rangeA = createRange(ranges[0]);
+    const rangeB = createRange(ranges[1]);
 
-    return [
-        [0, 1],
-        [1, 0],
-    ].some(
-        ([current, other]) => rangeA[current] <= rangeB[current] && rangeA[other] >= rangeB[other]
+    return (
+        rangeA.every((val) => rangeB.includes(val)) || rangeB.every((val) => rangeA.includes(val))
     );
 };
