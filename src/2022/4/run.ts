@@ -1,5 +1,4 @@
-import { log } from '../../lib/log';
-import { getInput } from '../../lib/getInput';
+import { getInput, log } from '../../lib';
 import { getTotalOverlaps } from './getTotalOverlaps';
 import { rangeContainsOtherRange } from './rangeContainsOtherRange';
 import { rangeOverlapsOtherRange } from './rangeOverlapsOtherRange';

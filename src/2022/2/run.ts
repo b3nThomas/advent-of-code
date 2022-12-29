@@ -1,5 +1,4 @@
-import { getInput } from '../../lib/getInput';
-import { log } from '../../lib/log';
+import { getInput, log } from '../../lib';
 import { getTotalScore } from './getTotalScore';
 import { getScoreUsingMove } from './getScoreUsingMove';
 import { getScoreUsingResult } from './getScoreUsingResult';

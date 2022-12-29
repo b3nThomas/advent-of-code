@@ -1,5 +1,4 @@
-import { getInput } from '../../lib/getInput';
-import { log } from '../../lib/log';
+import { getInput, log } from '../../lib';
 import { getPrioritiesSumOfGroups, getPrioritiesSumOfRucksacks } from './getPrioritiesSum';
 
 const input = getInput(2022, 3).split('\n');

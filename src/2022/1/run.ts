@@ -1,5 +1,4 @@
-import { getInput } from '../../lib/getInput';
-import { log } from '../../lib/log';
+import { getInput, log } from '../../lib';
 import { collectCaloriesTotals } from './collectCaloriesTotals';
 import { getHighest, getHighestThree } from './getHighestCalories';
 
