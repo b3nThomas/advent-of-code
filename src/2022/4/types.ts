@@ -5,3 +5,5 @@ export const SectionRangeSchema = z.custom<`${number}-${number}`>(
 );
 
 export type SectionRange = z.infer<typeof SectionRangeSchema>;
+
+export type ContainsOverlaps = (ranges: [SectionRange, SectionRange]) => boolean;

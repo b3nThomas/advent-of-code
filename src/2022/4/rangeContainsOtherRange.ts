@@ -1,6 +1,6 @@
-import { SectionRange } from './types';
+import type { SectionRange } from './types';
 
-export const rangeContainsOtherRange = (ranges: [SectionRange, SectionRange]) => {
+export const rangeContainsOtherRange = (ranges: [SectionRange, SectionRange]): boolean => {
     const rangeA = ranges[0].split('-').map(Number);
     const rangeB = ranges[1].split('-').map(Number);
 

@@ -1,6 +1,6 @@
 import { isTruthy } from '../../utils/isTruthy';
 import { extractRanges } from './extractRanges';
-import { rangeContainsOtherRange } from './rangeContainsOtherRange';
+import type { ContainsOverlaps } from './types';
 
-export const getTotalOverlaps = (input: string[]): number =>
-    input.map((val) => rangeContainsOtherRange(extractRanges(val))).filter(isTruthy).length;
+export const getTotalOverlaps = (containsOverlaps: ContainsOverlaps, input: string[]): number =>
+    input.map((val) => containsOverlaps(extractRanges(val))).filter(isTruthy).length;
