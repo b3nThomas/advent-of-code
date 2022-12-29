@@ -1,4 +1,4 @@
-import { isTruthy } from '../../utils/isTruthy';
+import { isTruthy } from '../../lib/isTruthy';
 import { type SectionRange, SectionRangeSchema } from './types';
 
 export const extractRanges = (input: string): [SectionRange, SectionRange] => {

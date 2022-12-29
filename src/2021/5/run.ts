@@ -1,5 +1,5 @@
-import { getInput } from '../../utils/getInput';
-import { log } from '../../utils/log';
+import { getInput } from '../../lib/getInput';
+import { log } from '../../lib/log';
 
 const input = getInput(2021, 5).split('\n');
 

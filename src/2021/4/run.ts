@@ -1,6 +1,6 @@
 import * as z from 'zod';
-import { getInput } from '../../utils/getInput';
-import { log } from '../../utils/log';
+import { getInput } from '../../lib/getInput';
+import { log } from '../../lib/log';
 
 const input = getInput(2021, 4)
     .split('\n\n')
