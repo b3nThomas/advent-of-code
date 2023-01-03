@@ -1,6 +1,7 @@
 import { getInput, log } from '../../lib';
 
 const input = getInput(2022, 5).split('\n');
+log.info({ input })
 
 const answer1 = 'TODO';
 const answer2 = 'TODO';
