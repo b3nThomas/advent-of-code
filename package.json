@@ -21,7 +21,6 @@
         "@types/jest": "^29.2.3",
         "@types/lodash": "^4.14.168",
         "@types/node": "^18.11.10",
-        "@types/pino": "^7.0.5",
         "babel-jest": "^29.3.1",
         "husky": "^8.0.2",
         "hygen": "^6.2.11",
