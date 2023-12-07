@@ -13,15 +13,8 @@ const firstLastDigits = (digits: number[]): [number, number] => [
 
 const concatDigits = (digits: [number, number]) => Number(digits.join(''));
 
-const getCalibrationValue = (text: string) => {
-    const digits = digitsOnly(text).split('').map(Number);
-    // console.log(digits); // eslint-disable-line
-    // const firstLast = firstLastDigits(digits);
-    // console.log(firstLast); // eslint-disable-line
-    // const concat = concatDigits(firstLast);
-    // console.log(); // eslint-disable-line
-    return concatDigits(firstLastDigits(digits));
-};
+const getCalibrationValue = (text: string) =>
+    concatDigits(firstLastDigits(digitsOnly(text).split('').map(Number)));
 
 const calibrationValuesTotal = (calibrationSheet: string[]) =>
     calibrationSheet.reduce((acc, cur) => acc + getCalibrationValue(cur), 0);
@@ -42,24 +35,18 @@ const wordToDigitMap: Record<string, number> = {
 
 const numberWordsToDigits = (originalText: string): string => {
     const regex = new RegExp(`${Object.keys(wordToDigitMap).join('|')}`, 'g');
-
-    const getMatches = (text: string) => Array.from(text.matchAll(regex))
+    const getMatches = (text: string) => Array.from(text.matchAll(regex));
+    let matches = getMatches(originalText);
 
     let replacedText = originalText;
 
-    let matches = getMatches(originalText);
-
     while (matches.length) {
-        replacedText = replacedText.replace(regex, (match) => {
-            const firstCharacter = match.charAt(0);
-    
-            // Concatenate the first character, the new character, and the rest of the string
-            const modifiedString = `${firstCharacter}${wordToDigitMap[match]}${match.slice(2)}`;
-            
-            return modifiedString;
-        });
+        replacedText = replacedText.replace(
+            regex,
+            (match) => `${match.charAt(0)}${wordToDigitMap[match]}${match.slice(2)}`
+        );
 
-        matches = getMatches(replacedText)
+        matches = getMatches(replacedText);
     }
 
     return replacedText;
