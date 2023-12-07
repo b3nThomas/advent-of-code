@@ -6,8 +6,9 @@
     "scripts": {
         "generate": "hygen",
         "prestart": "tsc -p .",
+        "clear": "clear && printf '\\e[3J'",
         "start": "node dist/${year}/${day}/run",
-        "watch": "nodemon -e ts --exec 'yarn start || exit 1'",
+        "watch": "nodemon -e ts --exec 'yarn clear && yarn start || exit 1'",
         "test": "jest"
     },
     "keywords": [],
