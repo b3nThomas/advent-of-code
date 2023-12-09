@@ -8,6 +8,8 @@ type SchematicEntryData<T extends number | string> = {
     coords: { y: number; x: number | null };
 };
 
+/* Part 1 ************************************************************************************************************/
+
 type NumberData = SchematicEntryData<number>;
 
 const captureLineNumberData = (line: string, yCoord: number): NumberData[] =>
@@ -49,6 +51,8 @@ const partNumbers = schematicNumberData.filter(isPartNumber);
 const partNumbersSum = partNumbers.reduce((acc, { value }) => (acc += value), 0);
 
 const answer1 = partNumbersSum; // 553825
+
+/* Part 2 ************************************************************************************************************/
 
 type GearData = SchematicEntryData<string>;
 
@@ -111,6 +115,8 @@ const gearRatios = schematicGearsData.map(calculateGearRatio);
 const gearRatiosSum = gearRatios.reduce((acc, cur) => acc += cur, 0);
 
 const answer2 = gearRatiosSum; // 93994191
+
+/* Results ***********************************************************************************************************/
 
 log.info('3-1: %s', answer1);
 log.info('3-2: %s', answer2);
