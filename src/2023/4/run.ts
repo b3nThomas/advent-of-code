@@ -10,11 +10,8 @@ const cleanNumbersString = (text: string) => text.trim().replace(/\s{2}/g, ' ');
 
 const getCardData = (card: string): ScratchCardInfo => {
     const split = card.split(/:|\|/);
-
     const cardNumber = Number(split[0].match(/[0-9]+/g)?.[0]) ?? 0;
-
     const [winningNumbersString, revealedNumbersString] = [split[1], split[2]];
-
     const [winningNumbers, revealedNumbers] = [winningNumbersString, revealedNumbersString].map(
         (numbersString) => cleanNumbersString(numbersString).split(' ').map(Number)
     );
@@ -48,10 +45,8 @@ const cardCounts = Array.from({ length: input.length }, (_, i) => i + 1).reduce(
 
 input.forEach((text) => {
     const cardData = getCardData(text);
-
-    const { cardNumber } = cardData;
-
     const matches = getTotalMatchingNumbers(cardData);
+    const { cardNumber } = cardData;
 
     if (matches > 0) {
         const noOfCurrentCards = cardCounts[cardNumber];
@@ -65,7 +60,6 @@ input.forEach((text) => {
 });
 
 const totalCards = sumNumbers(Object.values(cardCounts));
-
 const answer2 = totalCards; // 8549735
 
 /* Results ***********************************************************************************************************/
